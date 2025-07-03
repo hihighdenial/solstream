@@ -9,8 +9,10 @@ const Home = () => {
       <Navbar />
 
       <Hero />
+    <div className="w-full">
 
       <Fitur1 />
+    </div>
     </div>
   );
 };

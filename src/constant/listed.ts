@@ -1,4 +1,4 @@
 export const listed = {
-    home: "/home",
+    home: "/",
     login: "/signin",
 }
