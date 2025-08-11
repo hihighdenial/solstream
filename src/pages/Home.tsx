@@ -2,6 +2,8 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Fitur1 from "../components/Fitur1";
+import Footer from "../components/footer";
+
 
 const Home = () => {
   return (
@@ -9,10 +11,11 @@ const Home = () => {
       <Navbar />
 
       <Hero />
-    <div className="w-full">
+      <div className="w-full">
+        <Fitur1 />
+      </div>
 
-      <Fitur1 />
-    </div>
+      <Footer />
     </div>
   );
 };

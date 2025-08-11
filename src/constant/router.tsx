@@ -1,17 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
-import { listed } from "./listed";
-import Login from "../pages/Login";
+import MovieDetails from "../pages/movie-details"; // Pastikan path sesuai
 
-const Route: ReturnType<typeof createBrowserRouter> = createBrowserRouter([
-    {
-        path: listed.home,
-        element: <Home />,
-    },
-    {
-        path: listed.login,
-        element: <Login />,
-    },
-])
+const Route = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/movie/:id",
+    element: <MovieDetails />,
+  },
+]);
 
 export default Route;
