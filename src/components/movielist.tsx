@@ -70,7 +70,7 @@ const Movielist = () => {
           className="group mt-6 flex items-center gap-3 bg-gradient-to-r from-[#ffb703] to-[#ff8800] hover:from-[#ffc933] hover:to-[#ff9900] text-black font-semibold px-8 py-1 rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,183,3,0.6)]"
         >
           <MdMovieFilter className="text-xl transition-transform duration-300 group-hover:rotate-12" />
-          <span className="tracking-wide">Watch Now</span>
+          <span className="tracking-wide">See For The Detail</span>
         </button>
       </div>
     </div>
@@ -82,7 +82,7 @@ const Movielist = () => {
       <div>
         <div className="overflow-x-auto relative">
           <h1 className="font-bold text-white mb-4 z-30 relative bg-base-300 w-fit px-2 py-1 rounded text-[28px]">
-            Film Indonesia
+            Indonesian Movies
           </h1>
           <div className="relative flex flex-row w-max pb-4 pt-8">
             {filmIndonesia.length > 0 ? (
@@ -100,7 +100,7 @@ const Movielist = () => {
       <div>
         <div className="overflow-x-auto relative">
           <h1 className="font-bold text-white mb-4 z-30 relative bg-base-300 w-fit px-2 py-1 rounded text-[28px]">
-            Film Global
+            Global Movies
           </h1>
           <div className="flex flex-row gap-4 w-max pb-4 pt-8">
             {filmGlobal && filmGlobal.length > 0 ? (
