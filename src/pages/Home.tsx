@@ -1,18 +1,16 @@
-
 import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import Fitur1 from "../components/Fitur1";
+import Banner from "../components/banner";
+import Movielist from "../components/movielist";
 import Footer from "../components/footer";
-
 
 const Home = () => {
   return (
     <div>
       <Navbar />
 
-      <Hero />
+      <Banner />
       <div className="w-full">
-        <Fitur1 />
+        <Movielist />
       </div>
 
       <Footer />

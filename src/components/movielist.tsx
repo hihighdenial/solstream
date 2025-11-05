@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"; // Tambahkan import navigate
 import { movieApi } from "../midleware/movie.api"; // pastikan path-nya benar
 import type { AxiosResponse } from "axios";
-
+import { MdMovieFilter } from "react-icons/md";
 interface MuvieResult {
   backdrop_path: string;
   id: number;
@@ -12,7 +12,7 @@ interface MuvieResult {
   original_language: string;
 }
 
-const Fitur1 = () => {
+const Movielist = () => {
   const navigate = useNavigate();
   const [filmIndonesia, setFilmIndonesia] = useState<MuvieResult[]>([]);
   const [filmGlobal, setFilmGlobal] = useState<MuvieResult[]>([]);
@@ -66,10 +66,11 @@ const Fitur1 = () => {
           <p className="text-white text-sm line-clamp-5">{item.overview}</p>
         </div>
         <button
-          className="btn btn-primary btn-sm w-full z-20"
-          onClick={() => navigate(`/movie/${item.id}`)} // Pindah ke halaman detail
+          onClick={() => navigate(`/movie/${item.id}`)}
+          className="group mt-6 flex items-center gap-3 bg-gradient-to-r from-[#ffb703] to-[#ff8800] hover:from-[#ffc933] hover:to-[#ff9900] text-black font-semibold px-8 py-1 rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,183,3,0.6)]"
         >
-          Watch
+          <MdMovieFilter className="text-xl transition-transform duration-300 group-hover:rotate-12" />
+          <span className="tracking-wide">Watch Now</span>
         </button>
       </div>
     </div>
@@ -105,16 +106,15 @@ const Fitur1 = () => {
             {filmGlobal && filmGlobal.length > 0 ? (
               filmGlobal.map(renderCard)
             ) : (
-              <p className="text-white">Tidak ada film global yang ditemukan.</p>
+              <p className="text-white">
+                Tidak ada film global yang ditemukan.
+              </p>
             )}
           </div>
         </div>
       </div>
     </div>
-
-    
   );
 };
 
-export default Fitur1;
-
+export default Movielist;

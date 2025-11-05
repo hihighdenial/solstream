@@ -32,28 +32,39 @@ export interface Movie {
 
 // Method API
 const movieApi = {
-
   getMovieDetails: (movieId: number) =>
-  instance({
-    method: "GET",
-    url: `3/movie/${movieId}?language=en-US`,
-  }),
+    instance({
+      method: "GET",
+      url: `3/movie/${movieId}?language=en-US`,
+    }),
 
-  // Ambil film global saja
   getGlobalMovies: () =>
     instance({
       method: "GET",
       url: "3/movie/popular?language=en-US&page=1",
     }),
 
-  // Ambil film Indonesia saja
   getIndonesianMovies: () =>
     instance({
       method: "GET",
       url: "3/discover/movie?language=id-ID&region=ID&sort_by=popularity.desc&with_origin_country=ID&page=1",
     }),
 
-  // Gabungkan film global + film Indonesia
+  // 🔥 Tambahan baru untuk ambil video trailer
+  getMovieVideos: (movieId: number) =>
+    instance({
+      method: "GET",
+      url: `3/movie/${movieId}/videos?language=en-US`,
+    }),
+
+  searchMovies: (query: string) =>
+    instance({
+      method: "GET",
+      url: `3/search/movie?query=${encodeURIComponent(
+        query
+      )}&language=en-US&page=1&include_adult=false`,
+    }),
+
   getPopularMovies: async (): Promise<Movie> => {
     try {
       const [globalRes, indoRes] = await Promise.all([
