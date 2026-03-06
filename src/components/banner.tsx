@@ -94,7 +94,7 @@ const Banner = () => {
             className="group mt-6 flex items-center gap-3 bg-gradient-to-r from-[#ffb703] to-[#ff8800] hover:from-[#ffc933] hover:to-[#ff9900] text-black font-semibold px-8 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,183,3,0.6)]"
           >
             <MdMovieFilter className="text-xl transition-transform duration-300 group-hover:rotate-12" />
-            <span className="tracking-wide">See For The Detail</span>
+            <span className="tracking-wide">Watch Now</span>
           </button>
         </div>
       </div>
